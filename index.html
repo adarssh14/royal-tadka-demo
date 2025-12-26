@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Royal Tadka | Premium Dining</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0c0c0c;color:#fff;scroll-behavior:smooth}
+section{padding:110px 80px}
+span{color:#f39c12}
+
+/* NAV */
+nav{
+position:fixed;top:0;width:100%;z-index:999;
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 80px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px)
+}
+nav h1{color:#f39c12}
+nav ul{list-style:none;display:flex;gap:30px}
+nav a{color:#fff;text-decoration:none}
+nav a:hover{color:#f39c12}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80") center/cover;
+display:flex;align-items:center;padding:80px
+}
+.hero h2{font-size:55px}
+.hero p{margin:20px 0;font-size:18px;opacity:.9}
+.hero button{
+padding:15px 40px;border:none;border-radius:30px;
+background:#f39c12;font-weight:600;cursor:pointer
+}
+
+/* TITLES */
+.title{text-align:center;margin-bottom:60px}
+.title h2{font-size:42px}
+
+/* MENU */
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.card{
+background:#1a1a1a;border-radius:15px;overflow:hidden;
+transition:.4s
+}
+.card:hover{transform:translateY(-10px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card .c{padding:20px}
+.price{color:#f39c12;font-weight:600;margin-top:10px}
+
+/* GALLERY */
+.gallery{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+.gallery img{
+width:100%;height:220px;object-fit:cover;border-radius:15px;
+transition:.4s
+}
+.gallery img:hover{transform:scale(1.05)}
+
+/* QR */
+.qr{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+.qr img{width:200px}
+
+/* OFFERS */
+.offers{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px
+}
+.offer{
+background:#1b1b1b;padding:30px;border-radius:15px;
+border-left:5px solid #f39c12
+}
+
+/* REVIEWS */
+.reviews{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px
+}
+.review{background:#1a1a1a;padding:25px;border-radius:15px}
+
+/* FORM */
+form{
+max-width:500px;margin:auto;background:#1a1a1a;
+padding:30px;border-radius:15px
+}
+input,textarea{
+width:100%;padding:12px;margin:10px 0;
+background:#111;border:none;color:#fff;border-radius:8px
+}
+button.submit{
+width:100%;padding:12px;border:none;border-radius:30px;
+background:#f39c12;font-weight:600
+}
+
+/* MAP */
+iframe{width:100%;height:350px;border-radius:15px;border:none}
+
+/* FLOAT BUTTONS */
+.float{
+position:fixed;right:20px;z-index:999
+}
+.whatsapp{bottom:90px}
+.call{bottom:30px}
+.float a{
+display:block;background:#25d366;color:#fff;
+padding:14px 18px;border-radius:50%;
+font-size:22px;text-decoration:none;margin-top:10px
+}
+.call a{background:#f39c12}
+
+/* FOOTER */
+footer{text-align:center;padding:25px;background:#000}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  nav{
+    padding:15px 20px;
+  }
+
+  nav ul{
+    gap:15px;
+    font-size:14px;
+  }
+
+  section{
+    padding:70px 20px;
+  }
+
+  /* HERO */
+  .hero{
+    padding:20px;
+    text-align:center;
+    justify-content:center;
+  }
+
+  .hero h2{
+    font-size:32px;
+    line-height:1.3;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero button{
+    padding:12px 30px;
+    font-size:14px;
+  }
+
+  /* MENU & CARDS */
+  .menu,
+  .gallery,
+  .offers,
+  .reviews{
+    grid-template-columns:1fr;
+  }
+
+  .card img{
+    height:180px;
+  }
+
+  /* QR SECTION */
+  .qr{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .qr img{
+    margin:auto;
+  }
+
+  /* FORM */
+  form{
+    width:100%;
+    padding:20px;
+  }
+
+  input, textarea{
+    font-size:14px;
+  }
+
+  /* MAP */
+  iframe{
+    height:260px;
+  }
+
+  /* FLOATING BUTTONS */
+  .float{
+    right:15px;
+  }
+
+  .whatsapp{
+    bottom:85px;
+  }
+
+  .call{
+    bottom:25px;
+  }
+}
+{
+section,nav{padding:80px 20px}
+.hero h2{font-size:38px}
+.qr{grid-template-columns:1fr;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>Royal Tadka</h1>
+<ul>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#offers">Offers</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#book">Book</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<div>
+<h2>Luxury Dining <span>Experience</span></h2>
+<p>Royal taste • Elegant ambience • Premium service</p>
+<button>Reserve Table</button>
+</div>
+</div>
+
+<section id="menu">
+<div class="title"><h2>Our <span>Menu</span></h2></div>
+<div class="menu">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80">
+
+<div class="c"><h3>Paneer Butter Masala</h3><div class="price">₹249</div></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80">
+<div class="c"><h3>Hyderabadi Biryani</h3><div class="price">₹299</div></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80">
+<div class="c"><h3>Tandoori Platter</h3><div class="price">₹399</div></div>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="title"><h2>Food <span>Gallery</span></h2></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+<img src="https://images.unsplash.com/photo-1542528180-a1208c5169a5">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+</div>
+</section>
+
+<section id="offers">
+<div class="title"><h2>Special <span>Offers</span></h2></div>
+<div class="offers">
+<div class="offer">🎉 20% OFF on Family Dinner</div>
+<div class="offer">🍽️ Free Dessert on Weekend</div>
+<div class="offer">🎂 Birthday Special Combo</div>
+</div>
+</section>
+
+<section id="reviews">
+<div class="title"><h2>Customer <span>Reviews</span></h2></div>
+<div class="reviews">
+<div class="review">⭐⭐⭐⭐⭐ Amazing food & ambience – Rahul</div>
+<div class="review">⭐⭐⭐⭐⭐ Best in Gorakhpur – Neha</div>
+<div class="review">⭐⭐⭐⭐⭐ Must visit place – Aman</div>
+</div>
+</section>
+
+<section id="book">
+<div class="title"><h2>Book <span>Table</span></h2></div>
+<form>
+<input placeholder="Name" required>
+<input placeholder="Mobile" required>
+<input type="date" required>
+<textarea placeholder="Message"></textarea>
+<button class="submit">Book Now</button>
+</form>
+</section>
+
+<section>
+<div class="title"><h2>Find <span>Us</span></h2></div>
+<iframe src="https://www.google.com/maps?q=gorakhpur&output=embed"></iframe>
+</section>
+
+<footer>© 2025 Royal Tadka | Designed by Adarsh Chandra</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float whatsapp">
+<a href="https://wa.me/916307010664">💬</a>
+</div>
+<div class="float call">
+<a href="tel:6307010664">📞</a>
+</div>
+
+</body>
+</html>
